@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Overlay Dropdowns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+        
+        .tank-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        
+        .dropdown-container {
+            position: absolute;
+            z-index: 10;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 11;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        
+        .dropdown-content label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        
+        .dropdown-content label:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /* Position each dropdown */
+        .gun {
+            top: 3%;
+            left: 10%;
+        }
+        
+        .armour {
+            top: 92%;
+            left: 10%;
+        }
+        
+        .propulsion {
+            bottom: 70%;
+            left: 77%;
+        }
+        
+        .ammo {
+            top: 95%;
+            right: 34%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Screenshot 2025-08-31 223658.png" alt="Tank" class="tank-image">
+        
+        <!-- Gun dropdown -->
+        <div class="dropdown-container gun">
+            <div class="dropdown">
+                <button class="dropdown-btn">Gun</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox"> 120mm Smoothbore</label>
+                    <label><input type="checkbox"> 125mm Smoothbore</label>
+                    <label><input type="checkbox"> 105mm Rifled</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Armour dropdown -->
+        <div class="dropdown-container armour">
+            <div class="dropdown">
+                <button class="dropdown-btn">Armour</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox"> Composite</label>
+                    <label><input type="checkbox"> Reactive</label>
+                    <label><input type="checkbox"> Spaced</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Propulsion dropdown -->
+        <div class="dropdown-container propulsion">
+            <div class="dropdown">
+                <button class="dropdown-btn">Propulsion</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox"> Diesel Engine</label>
+                    <label><input type="checkbox"> Gas Turbine</label>
+                    <label><input type="checkbox"> Hybrid Electric</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ammo dropdown -->
+        <div class="dropdown-container ammo">
+            <div class="dropdown">
+                <button class="dropdown-btn">Ammo</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox"> APFSDS</label>
+                    <label><input type="checkbox"> HEAT</label>
+                    <label><input type="checkbox"> HE</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // You can add JavaScript functionality here if needed
+        // For example, to collect selected options when form is submitted
+    </script>
+</body>
+</html>
